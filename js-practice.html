@@ -70,12 +70,43 @@
         return fullName;
     }
 
-        console.log(makeFullName("Julia", "Brooke", "Jones"));
-        console.log(makeFullName('Robert', '"Beto"', 'O\'Rourke'));
-        console.log(makeFullName("Someone", "Else's", "Name"));
+    console.log(makeFullName("Julia", "Brooke", "Jones"));
+    console.log(makeFullName('Robert', '"Beto"', 'O\'Rourke'));
+    console.log(makeFullName("Someone", "Else's", "Name"));
 
-        let hello = makeFullName("Julia", "Brooke", "Jones");
-        console.log(hello.toUpperCase());
+    let hello = makeFullName("Julia", "Brooke", "Jones");
+    console.log(hello.toUpperCase());
+
+    console.log("Making a better name function:")
+    function makeBetterName(firstName, middleName, lastName) {
+      if (middleName.length === 1) {
+        middleName = middleName + ".";
+        let fullName = firstName + " " + middleName + " " + lastName;
+        return fullName;
+    } else {
+      let fullName = firstName + " " + middleName + " " + lastName;
+      return fullName;
+      }
+    }
+
+    console.log(makeBetterName("Joan", "Marie", "Larkin"));
+    console.log(makeBetterName("Donald", "F", "Trump"));
+
+    function whoWon(homeScore, awayScore) {
+      if (homeScore > awayScore){
+        return "The home team won";
+      } else if (homeScore === awayScore){
+        return "It's a tie";
+      } else {
+        return "The away team won";
+      } 
+    }
+
+    console.log(whoWon(3, 6));
+    console.log(whoWon(29, 8));
+    console.log(whoWon(2, 2));
+    console.log(whoWon(3, 33));
+
 
     /*
     FYI that this is a comment, too
